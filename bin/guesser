@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+# pick a secret number between 1 and 10
+# remember it
+@secret_number = rand(10) + 1
+
+# ask the user to make a guess
+def making_correct_guess
+  
+  # show some blank lines to give us room to guess
+  puts "\n\n"
+
+  # ask who's turn it is to guess
+  print "Who's turn is it?   "
+
+  # get the name that was typed
+  # remember the name
+  person_guessing = gets.strip
+
+  # tell them we are ready
+  print "Ok #{person_guessing}, make your guess!   "
+
+  number_guessed = gets.strip.to_i
+
+  # if they didn't get a number 
+  if number_guessed < 1 or number_guessed > 10
+    # tell them it was not right
+    puts "That number is not between 1 and 10."
+    return false
+  end
+  
+  # Tell them what number they guessed
+  puts "#{person_guessing} guessed #{number_guessed}!"
+  
+  # see if the number the right one
+  if number_guessed == @secret_number
+    # tell them they got it right
+    puts "#{person_guessing} got it right!"
+    return true
+  end
+  
+  # see if it was too low
+  if number_guessed < @secret_number
+    # tell them it was too low
+    puts "That number is too low!"
+    return false
+  end
+  
+  # it must be too high
+  puts "That number is too high!"
+  return false
+    
+end
+
+
+# keep trying unless they get it right
+while not making_correct_guess
+  puts "Try again!"
+end
+
+puts "\n\n\n\n\n\n"
