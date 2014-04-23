@@ -48,9 +48,9 @@ Hopefully that works.
 
 ### Code
 
-Then I'm going to run the code in this repository (bin/picker).
+Then I'm going to run the code in this repository.
 
-    $ guesser
+    $ ./bin/guesser
     
 And have it play the game a few times.
 
