@@ -62,6 +62,6 @@ Enlightenment?
 
 Questions asked by all.
 
-SHould be about 30 minutes total.    
+Should be about 30 minutes total.    
 
 
